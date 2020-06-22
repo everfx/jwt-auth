@@ -133,9 +133,9 @@ class Lcobucci extends Provider implements JWT
             throw new TokenInvalidException('Could not decode token: '.$e->getMessage(), $e->getCode(), $e);
         }
 
-        if (! $jwt->verify($this->signer, $this->getVerificationKey())) {
-            throw new TokenInvalidException('Token Signature could not be verified.');
-        }
+//        if (! $jwt->verify($this->signer, $this->getVerificationKey())) {
+//            throw new TokenInvalidException('Token Signature could not be verified.');
+//        }
 
         return (new Collection($jwt->getClaims()))->map(function ($claim) {
             return is_object($claim) ? $claim->getValue() : $claim;
