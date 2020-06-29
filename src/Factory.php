@@ -45,8 +45,8 @@ class Factory
         'iss',
         'iat',
         'exp',
-        'nbf',
-        'jti',
+        //'nbf',
+        //'jti',
     ];
 
     /**
